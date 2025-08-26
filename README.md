@@ -1,0 +1,3 @@
+cấp quyền cho user 
+GRANT CREATE, ALTER, DROP, INDEX, SELECT, INSERT, UPDATE, DELETE ON *.* TO 'vodaplayuser'@'%';
+FLUSH PRIVILEGES;
