@@ -8,6 +8,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { PassportModule } from '@nestjs/passport';
 import { AuthController } from './auth/auth.controller';
 import { GoogleStrategy } from './google/google.strategy';
+import { VideoAiService } from './video-ai/video-ai.service';
 
 
 
@@ -25,6 +26,6 @@ import { GoogleStrategy } from './google/google.strategy';
     PassportModule.register({ defaultStrategy: 'google' })
   ],
   controllers: [AppController, AuthController],
-  providers: [AppService, GoogleStrategy],
+  providers: [AppService, GoogleStrategy, VideoAiService],
 })
 export class AppModule { }
